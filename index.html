@@ -53,12 +53,15 @@
           if (cameras.length > 0) {
             scanner.start(cameras[0]);
           } else {
+            console.log("then");
             console.error("No cameras found.");
           }
         })
         .catch(function (e) {
           // console.error(e);
           console.error("No cameras found.");
+          console.log("catch");
+          $(".text").text("請確保您已啟用相機");
         });
       // let scanner = new Instascan.Scanner({
       //   continuous: true, // 連續掃描
