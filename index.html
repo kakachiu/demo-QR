@@ -18,6 +18,7 @@
 
   <body>
     <video id="preview" class="preview"></video>
+    <p class="text"></p>
     <script src="instascan.min.js"></script>
     <script type="text/javascript">
       let scanner = new Instascan.Scanner({
@@ -40,6 +41,8 @@
             // }
             return true;
           } else {
+            $(".text").text("請確保您已啟用相機");
+            console.log("找不到照相機");
             return false;
           }
         }
