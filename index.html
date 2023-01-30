@@ -25,15 +25,16 @@
         function getConfirmation() {
           var retVal = confirm("掃描結果：" + content); // 掃描結果顯示
           console.log(retVal);
-          // if (retVal == true) {
-          //   var checkurl = /^((https?|http?|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/; // 檢查是否為網址
-          //   if (checkurl.test(content)) {
-          //     window.open(content, "_self"); // 開啟網址
-          //   }
-          //   return true;
-          // } else {
-          //   return false;
-          // }
+          if (retVal == true) {
+            console.log("成功");
+            // var checkurl = /^((https?|http?|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/; // 檢查是否為網址
+            // if (checkurl.test(content)) {
+            //   window.open(content, "_self"); // 開啟網址
+            // }
+            return true;
+          } else {
+            return false;
+          }
         }
       });
 
